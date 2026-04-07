@@ -1,0 +1,122 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+  animation: fadeIn 0.35s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card.complete {
+  border-color: var(--correct-border);
+  border-left: 2px solid var(--correct);
+}
+
+/* ── Header ── */
+.header {
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--ash);
+}
+
+.header.complete {
+  background: var(--ash);
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.category {
+  font-family: var(--ff-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.subcategory {
+  font-family: var(--ff-body);
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--dust);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.indexBadge {
+  font-family: var(--ff-display);
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--stone);
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+}
+
+.btnDone {
+  font-family: var(--ff-display);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--stone);
+  transition: all 0.15s;
+  cursor: default;
+}
+
+.btnDone.marked {
+  border-color: var(--correct-border);
+  background: var(--correct);
+  color: #ffffff;
+}
+
+.btnDone:disabled:not(.marked) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Completed banner ── */
+.completedAt {
+  padding: 6px 18px;
+  text-align: center;
+  font-family: var(--ff-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--correct);
+  opacity: 0.85;
+}

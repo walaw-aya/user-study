@@ -1,0 +1,223 @@
+.block {
+  padding: 20px 18px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.block:last-of-type {
+  border-bottom: none;
+}
+
+/* ── Block type backgrounds ── */
+.correct {
+  background: var(--correct-bg);
+}
+
+.incorrect {
+  background: var(--error-bg);
+}
+
+/* ── Label ── */
+.label {
+  font-family: var(--ff-display);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.label::before {
+  content: "";
+  width: 12px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+.correctLabel {
+  color: var(--correct);
+}
+
+.incorrectLabel {
+  color: var(--error);
+}
+
+/* ── Quran text ── */
+.quranText {
+  font-family: var(--ff-arabic);
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  line-height: 2.8;
+  color: var(--ink);
+  text-align: right;
+  direction: rtl;
+  margin-bottom: 14px;
+}
+
+.incorrect .quranText {
+  color: #7a1c2a;
+}
+
+/* ── Previously recorded link ── */
+.prevLink {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--correct);
+  text-decoration: none;
+  margin-bottom: 10px;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.prevLink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ── Saved tag ── */
+.savedTag {
+  font-family: var(--ff-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--correct);
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* ── Status message ── */
+.statusMsg {
+  font-family: var(--ff-body);
+  font-size: 0.75rem;
+  font-weight: 300;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border-left: 2px solid transparent;
+}
+
+.statusMsg.info {
+  background: var(--correct-bg);
+  color: var(--correct);
+  border-left-color: var(--correct-border);
+  border: 1px solid var(--correct-border);
+  border-left: 2px solid var(--correct);
+}
+
+.statusMsg.success {
+  background: var(--correct-bg);
+  color: var(--correct);
+  border: 1px solid var(--correct-border);
+  border-left: 2px solid var(--correct);
+}
+
+.statusMsg.error {
+  background: var(--error-bg);
+  color: var(--error);
+  border: 1px solid var(--error-border);
+  border-left: 2px solid var(--error);
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 4px;
+  font-family: var(--ff-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, opacity 0.15s;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btnStart {
+  background: transparent;
+  color: var(--correct);
+  border: 1px solid var(--correct-border);
+}
+
+.btnStart:hover:not(:disabled) {
+  background: rgba(44, 122, 75, 0.07);
+}
+
+.btnStop {
+  background: transparent;
+  color: var(--error);
+  border: 1px solid var(--error-border);
+}
+
+.btnStop:hover:not(:disabled) {
+  background: rgba(192, 57, 43, 0.06);
+}
+
+/* ── Recording indicator ── */
+.recIndicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--error);
+}
+
+.recDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--error);
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.12; }
+}
+
+.recTimer {
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: var(--error);
+  opacity: 0.8;
+}
+
+/* ── Upload progress ── */
+.progressWrap {
+  height: 2px;
+  background: var(--correct-border);
+  border-radius: 1px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: var(--correct);
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}

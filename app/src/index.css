@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Scheherazade+New:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ── Core palette ── */
+  --ink:           #0A0A0A;
+  --midnight:      #0E1117;
+  --slate:         #2C2C30;
+
+  --gold:          #C4A55A;
+  --gold-dark:     #A07850;
+  --gold-light:    #EDD9BC;
+
+  --bone:          #FAFAF8;
+  --ash:           #F5F3EE;
+  --sand:          #EAE6DC;
+  --stone:         #B8B0A2;
+  --dust:          #7A7369;
+
+  /* ── Semantic ── */
+  --correct:       #2C7A4B;
+  --correct-bg:    #EAF4EE;
+  --correct-border:#A8D4BC;
+
+  --error:         #C0392B;
+  --error-bg:      #F8EAEC;
+  --error-border:  #D4A8B0;
+
+  /* ── Surfaces ── */
+  --bg:            var(--bone);
+  --surface:       #ffffff;
+  --border:        var(--sand);
+  --border-soft:   #EEEAE2;
+
+  /* ── Shadows ── */
+  --shadow:        rgba(10, 10, 10, 0.06);
+  --shadow-md:     rgba(10, 10, 10, 0.12);
+
+  /* ── Typography ── */
+  --ff-display:    'Syne', sans-serif;
+  --ff-body:       'DM Sans', sans-serif;
+  --ff-arabic:     'Scheherazade New', serif;
+}
+
+html {
+  direction: ltr;
+}
+
+body {
+  font-family: var(--ff-body);
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  line-height: 1.65;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}

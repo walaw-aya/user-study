@@ -1,0 +1,64 @@
+.float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  background: var(--midnight);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 2px solid var(--gold);
+  border-radius: 4px;
+  padding: 14px 16px;
+  width: 220px;
+  max-height: 60vh;
+  overflow-y: auto;
+  direction: rtl;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: var(--ff-arabic);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 12px;
+  user-select: none;
+  gap: 8px;
+  opacity: 0.85;
+  transition: opacity 0.15s;
+}
+
+.header:hover {
+  opacity: 1;
+}
+
+.toggle {
+  font-family: var(--ff-display);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  direction: rtl;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.9;
+}

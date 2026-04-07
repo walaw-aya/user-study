@@ -1,0 +1,117 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--midnight);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0 32px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  /* font-family: var(--ff-arabic); */
+  /* font-size: 1.5rem; */
+  width: 2.5em;
+  /* color: var(--gold); */
+  /* line-height: 1; */
+  /* direction: rtl; */
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.appName {
+  font-family: var(--ff-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Header right ── */
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.userEmail {
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btnLogout {
+  font-family: var(--ff-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.btnLogout:hover:not(:disabled) {
+  border-color: rgba(196, 165, 90, 0.5);
+  color: var(--gold);
+}
+
+.btnLogout:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ── Main ── */
+.main {
+  flex: 1;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 24px 96px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .userEmail {
+    display: none;
+  }
+
+  .main {
+    padding: 28px 16px 72px;
+  }
+}
