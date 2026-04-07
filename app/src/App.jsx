@@ -31,7 +31,7 @@ export default function App() {
           {/* <span className={styles.logo}>ولو آية</span> */}
           <img
             className={styles.logo}
-            src="../public/walaw-aya-logo-white.svg"
+            src={`${import.meta.env.BASE_URL}walaw-aya-logo-white.svg`}
           />
           <div className={styles.divider} />
           <span className={styles.appName}>User Study</span>

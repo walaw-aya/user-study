@@ -120,7 +120,9 @@
   font-weight: 300;
   padding: 11px 14px;
   outline: none;
-  transition: border-color 0.2s, background 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 }
 
 .input:focus {
@@ -147,7 +149,10 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s, opacity 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.1s,
+    opacity 0.2s;
 }
 
 .btnLogin:hover:not(:disabled) {
@@ -175,4 +180,8 @@
   font-size: 0.8rem;
   font-weight: 300;
   line-height: 1.5;
+}
+
+.logo {
+  width: 11.25em;
 }

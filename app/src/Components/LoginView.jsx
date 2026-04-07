@@ -46,9 +46,12 @@ export default function LoginView({ onLogin }) {
     <div className={styles.page}>
       <div className={styles.container}>
         <div className={styles.emblem}>
-          <span className={styles.bismillah}>
-            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-          </span>
+          <div>
+            <img
+              className={styles.logo}
+              src={`${import.meta.env.BASE_URL}walaw-aya-logo-white.svg`}
+            />
+          </div>
           <div className={styles.ornament}>
             <span className={styles.ornamentText}>Walaw Aya User Study</span>
           </div>
