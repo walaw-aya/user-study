@@ -1,5 +1,6 @@
 // ─── TAJWEED TAG DEFINITIONS ─────────────────────────────────────────────────
 export const TAJWEED_TAGS = [
+  { tag: "⟪مد_جائز⟫", color: "#E69F00" }, // orange
   { tag: "⟪مد_طبيعي⟫", color: "#56B4E9" }, // sky blue
   { tag: "⟪مد_لازم⟫", color: "#009E73" }, // bluish green
   { tag: "⟪مد_واجب⟫", color: "#F0E442" }, // yellow (use with bold text)
