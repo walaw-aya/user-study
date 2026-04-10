@@ -1,23 +1,21 @@
 // ─── TAJWEED TAG DEFINITIONS ─────────────────────────────────────────────────
 export const TAJWEED_TAGS = [
-  { tag: "⟪مد جائز⟫", color: "#E69F00" }, // orange
-  { tag: "⟪مد طبيعي⟫", color: "#56B4E9" }, // sky blue
-  { tag: "⟪مد لازم⟫", color: "#009E73" }, // bluish green
-  { tag: "⟪مد واجب⟫", color: "#F0E442" }, // yellow (use with bold text)
+  { tag: "⟪مد_طبيعي⟫", color: "#56B4E9" }, // sky blue
+  { tag: "⟪مد_لازم⟫", color: "#009E73" }, // bluish green
+  { tag: "⟪مد_واجب⟫", color: "#F0E442" }, // yellow (use with bold text)
 
   { tag: "⟪إقلاب⟫", color: "#0072B2" }, // strong blue
-  { tag: "⟪إخفاء شفوي⟫", color: "#D55E00" }, // vermillion (safe red-orange)
+  { tag: "⟪إخفاء_شفوي⟫", color: "#D55E00" }, // vermillion (safe red-orange)
   { tag: "⟪إخفاء⟫", color: "#CC79A7" }, // pink/purple
 
-  { tag: "⟪غنة⟫", color: "#009E73" }, // reuse green but distinguish via bold
   { tag: "⟪قلقلة⟫", color: "#999999" }, // neutral gray
 
-  { tag: "⟪إدغام بغنة⟫", color: "#0072B2" }, // reuse blue family
-  { tag: "⟪إدغام بغير غنة⟫", color: "#E69F00" }, // reuse orange
+  { tag: "⟪إدغام_بغنة⟫", color: "#0072B2" }, // reuse blue family
+  { tag: "⟪إدغام_بغير_غنة⟫", color: "#E69F00" }, // reuse orange
 
-  { tag: "⟪إدغام شفوي⟫", color: "#D55E00" }, // reuse vermillion
-  { tag: "⟪إدغام متجانسين⟫", color: "#56B4E9" }, // reuse sky blue
-  { tag: "⟪إدغام متقاربين⟫", color: "#CC79A7" }, // reuse purple
+  { tag: "⟪إدغام_شفوي⟫", color: "#D55E00" }, // reuse vermillion
+  { tag: "⟪إدغام_متجانسين⟫", color: "#56B4E9" }, // reuse sky blue
+  { tag: "⟪إدغام_متقاربين⟫", color: "#CC79A7" }, // reuse purple
 ];
 const tajweedMap = new Map(TAJWEED_TAGS.map((t) => [t.tag, t.color]));
 
